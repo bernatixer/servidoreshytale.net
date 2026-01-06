@@ -1,276 +1,617 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <title>Top 10 Servidores de Hytale en Español</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Top 10 servidores de Hytale en español. Encuentra los mejores servidores de Hytale: IP, modos de juego, jugadores, votos y más."
-  />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Servidor de Hytale en Español</title>
+    <meta name="description" content="Únete a NEXUS, el servidor de Hytale más esperado de la comunidad hispanohablante. Aventura, creatividad y comunidad te esperan.">
+    <link rel="icon" type="image/png" href="nexus.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#inicio" class="logo-link">
-      <div class="logo">
-        <span class="logo-mark">H</span>
-          <span class="logo-text">Servidores Hytale</span>
-      </div>
-      </a>
-      <nav class="main-nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#top40">Top 10</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#anadir" class="btn btn-small btn-outline">Añadir servidor</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
 
-  <main id="inicio">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Top 10 servidores de Hytale en español</h1>
-          <p>
-            Descubre los mejores servidores de Hytale para la comunidad hispanohablante:
-            IP, modos de juego, número de jugadores, votos y mucho más.
-          </p>
-          <div class="hero-actions">
-            <a href="#top40" class="btn">Ver Top 10</a>
-            <a href="#anadir" class="btn btn-outline">Añadir mi servidor</a>
-          </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <img src="nexus.png" alt="NEXUS" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#redes">Redes</a></li>
+                <li><a href="#trabajos">Trabajos</a></li>
+                <li><a href="#ventajas">Ventajas</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#discord" class="nav-discord">Discord</a></li>
+            </ul>
         </div>
-        <article class="server-card hero-server">
-            <div class="server-card-header">
-            <span class="badge badge-gold">Destacado</span>
-              <span class="badge badge-country">🇪🇸 España</span>
-            </div>
-          <h3>Nexus Hytale</h3>
-          <p class="server-ip">nexushytale.com</p>
-            <p class="server-modes-small">
-              Survival · Aventura · Mazmorras · Misiones cooperativas
-            </p>
-            <p class="server-stats-small">
-              Jugadores: 0/0
-            </p>
-            <div class="server-card-footer">
-              <a href="#" class="btn btn-small">Ver ficha</a>
-            </div>
-          </article>
-      </div>
-    </section>
+    </nav>
 
-    <!-- Top 10 TABLE -->
-    <section id="top40" class="section section-alt">
-      <div class="container">
-        <h2>Top 10 servidores de Hytale</h2>
-        <p class="section-subtitle">
-          Ranking de servidores de Hytale orientados a la comunidad hispanohablante.
-        </p>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://hytale.com/static/videos/homepage/promo-loop.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <!-- Magical floating elements -->
+            <div class="hero-magic-elements">
+                <!-- Glowing orbs -->
+                <div class="magic-orb orb-1"></div>
+                <div class="magic-orb orb-2"></div>
+                <div class="magic-orb orb-3"></div>
+                <!-- Crystals -->
+                <div class="magic-crystal crystal-1"></div>
+                <div class="magic-crystal crystal-2"></div>
+                <!-- Fireflies -->
+                <div class="firefly firefly-1"></div>
+                <div class="firefly firefly-2"></div>
+                <div class="firefly firefly-3"></div>
+                <div class="firefly firefly-4"></div>
+                <div class="firefly firefly-5"></div>
+                <!-- Floating runes -->
+                <div class="floating-rune rune-1">᛭</div>
+                <div class="floating-rune rune-2">ᚱ</div>
+                <div class="floating-rune rune-3">ᚦ</div>
+                <div class="floating-rune rune-4">ᛟ</div>
+                <!-- Mist layers -->
+                <div class="mist mist-1"></div>
+                <div class="mist mist-2"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <!-- Mysterious rune circle behind logo -->
+            <div class="rune-circle">
+                <div class="rune-ring ring-outer"></div>
+                <div class="rune-ring ring-inner"></div>
+                <div class="rune-symbols"></div>
+            </div>
+            
+            <img src="nexus.png" alt="NEXUS" class="hero-logo">
+            
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                PRÓXIMAMENTE · 13 ENERO 2026
+            </div>
+            
+            <p class="hero-tagline">Donde comienza tu próxima gran aventura</p>
+            <p class="hero-subtitle">El servidor hispanohablante que llevábamos años esperando. <br>Únete a la comunidad que construirá el futuro de Hytale.</p>
+            
+            <div class="hero-actions">
+                <button class="btn btn-primary btn-glow">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    Jugar Ahora
+                </button>
+                <button class="btn btn-secondary" id="copyIp">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    <span id="ipText">play.nexus.gg</span>
+                </button>
+            </div>
 
-        <div class="server-list">
-          <!-- Server 1 - Nexus Hytale -->
-          <div class="server-list-item">
-            <div class="server-rank">
-              <span class="rank-number">1</span>
-            </div>
-            <div class="server-banner">
-              <img src="nexus.png" alt="Nexus Hytale" class="server-logo">
-            </div>
-            <div class="server-info">
-              <h3 class="server-name">Nexus Hytale</h3>
-              <div class="server-ip-container">
-                <span class="ip-label">IP:</span>
-                <div class="ip-copy-wrapper">
-                  <span class="server-ip-text">nexushytale.com</span>
-                  <button class="copy-btn" onclick="copyToClipboard('nexushytale.com')" title="Copiar IP">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                  </button>
+            <div class="server-status">
+                <div class="status-indicator online">
+                    <span class="status-dot"></span>
+                    EN LÍNEA
                 </div>
-              </div>
-              <div class="server-details">
-                <span class="detail-badge">🇪🇸 España</span>
-                <span class="detail-badge">0/0 jugadores</span>
-              </div>
-            </div>
-            <div class="server-social">
-              <a href="https://discord.gg/DxBUN6RRTp" class="social-link discord" title="Discord" target="_blank">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Server 2 - Placeholder -->
-          <div class="server-list-item">
-            <div class="server-rank">
-              <span class="rank-number">2</span>
-            </div>
-            <div class="server-banner">
-              <img src="reworld.png" alt="Reworld Hytale" class="server-logo">
-            </div>
-            <div class="server-info">
-              <h3 class="server-name">Reworld Hytale</h3>
-              <div class="server-ip-container">
-                <span class="ip-label">IP:</span>
-                <div class="ip-copy-wrapper">
-                  <span class="server-ip-text">reworldhytale.com</span>
-                  <button class="copy-btn" onclick="copyToClipboard('reworldhytale.com')" title="Copiar IP">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                  </button>
+                <div class="status-divider"></div>
+                <div class="status-players">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <span>0 / ∞ jugadores</span>
                 </div>
-              </div>
-              <div class="server-details">
-                <span class="detail-badge">🇪🇸 España</span>
-                <span class="detail-badge">0/0 jugadores</span>
-              </div>
             </div>
-            <div class="server-social">
-            </div>
-          </div>
         </div>
-      </div>
+
     </section>
 
-    <!-- NOTICIAS -->
-    <section id="noticias" class="section">
-      <div class="container">
-        <h2>Noticias de Hytale y de la comunidad</h2>
-        <p class="section-subtitle">
-          Publica actualizaciones sobre servidores, cambios en el ranking y novedades de la comunidad.
-        </p>
-        <div class="news-grid">
-          <article class="news-card">
-            <h3>Actualización del ranking de enero</h3>
-            <p class="news-meta">Publicado el 10/01/2025 · Ranking</p>
-            <p>
-              Hemos revisado votos y actividad de los servidores. “Hytale Reinos Ibéricos”
-              mantiene el #1, mientras que “Hytale Latam Legends” sube al puesto #2 por
-              crecimiento de jugadores diarios.
-            </p>
-            <a href="#" class="news-link">Leer más</a>
-          </article>
-          <article class="news-card">
-            <h3>Nuevos servidores hispanohablantes añadidos</h3>
-            <p class="news-meta">Publicado el 03/01/2025 · Comunidad</p>
-            <p>
-              Se han añadido 5 servidores nuevos orientados a jugadores de España y Latinoamérica.
-              Si quieres que tu servidor aparezca en la lista, envíanos los datos desde el
-              formulario de alta.
-            </p>
-            <a href="#" class="news-link">Leer más</a>
-          </article>
-          <article class="news-card">
-            <h3>Guía rápida: cómo elegir servidor de Hytale</h3>
-            <p class="news-meta">Publicado el 20/12/2024 · Guías</p>
-            <p>
-              Explicamos las diferencias entre servidores orientados al rol, survival, minijuegos
-              y modos hardcore, para que encuentres tu comunidad ideal.
-            </p>
-            <a href="#" class="news-link">Leer más</a>
-          </article>
+    <!-- Discord Section -->
+    <section id="discord" class="discord-section">
+        <div class="container">
+            <div class="discord-card">
+                <div class="discord-content">
+                    <div class="discord-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                    </div>
+                    <div class="discord-text">
+                        <h3>Únete a nuestra comunidad</h3>
+                        <p>Conecta con otros jugadores, recibe las últimas noticias y participa en eventos exclusivos. Sé parte de la familia NEXUS antes del lanzamiento.</p>
+                        <div class="discord-stats">
+                            <div class="stat">
+                                <span class="stat-value">500+</span>
+                                <span class="stat-label">Miembros</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">50+</span>
+                                <span class="stat-label">En línea</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://discord.gg/nexus" class="btn btn-discord" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    Unirse al Discord
+                </a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- AÑADIR SERVIDOR -->
-    <section id="anadir" class="section section-alt">
-      <div class="container">
-        <h2>Añadir un servidor de Hytale</h2>
-        <p class="section-subtitle">
-          Rellena estos datos (en una versión real los enviarías a tu backend, a un formulario o a Google Forms).
-        </p>
-        <form class="add-server-form">
-          <div class="form-row">
-            <div class="form-field">
-              <label for="nombre">Nombre del servidor</label>
-              <input id="nombre" type="text" placeholder="Ej: Hytale Reinos Ibéricos" />
+    <!-- Features Section -->
+    <section id="caracteristicas" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">EXPERIENCIA</span>
+                <h2 class="section-title">¿Qué te espera en NEXUS?</h2>
+                <p class="section-subtitle">Un servidor diseñado desde cero pensando en la comunidad hispanohablante</p>
             </div>
-            <div class="form-field">
-              <label for="ip">IP / Dominio</label>
-              <input id="ip" type="text" placeholder="Ej: play.reinosibericos.es" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="pais">País / Región</label>
-              <input id="pais" type="text" placeholder="Ej: España" />
-            </div>
-            <div class="form-field">
-              <label for="slots">Slots máximos</label>
-              <input id="slots" type="number" placeholder="Ej: 500" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field form-field-full">
-              <label for="modos">Modos de juego</label>
-              <input
-                id="modos"
-                type="text"
-                placeholder="Ej: Survival, Aventura, Mazmorras, Minijuegos..."
-              />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field form-field-full">
-              <label for="descripcion">Descripción</label>
-              <textarea
-                id="descripcion"
-                rows="4"
-                placeholder="Cuenta brevemente qué ofrece tu servidor a los jugadores."
-              ></textarea>
-            </div>
-          </div>
-          <button type="button" class="btn">
-            Enviar solicitud (demo)
-          </button>
-          <p class="form-hint">
-            Nota: esta es una página estática de ejemplo. Necesitarías conectar este formulario
-            a un backend real o a un servicio de formularios.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>
-        © 2025 Servidores Hytale · Página no oficial · No afiliada a Hypixel Studios ni Riot Games.
-      </p>
-      <div class="footer-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#top40">Top 10</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#anadir">Añadir servidor</a>
-      </div>
+            <div class="features-grid">
+                <div class="feature-card" data-reveal>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Aventura Épica</h3>
+                    <p>Explora mundos generados proceduralmente llenos de secretos, mazmorras y tesoros por descubrir.</p>
+                </div>
+
+                <div class="feature-card" data-reveal>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Comunidad Activa</h3>
+                    <p>Únete a miles de jugadores hispanohablantes que comparten tu pasión por la aventura y la creatividad.</p>
+                </div>
+
+                <div class="feature-card" data-reveal>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Eventos Exclusivos</h3>
+                    <p>Participa en torneos, competiciones y eventos especiales con premios únicos para nuestra comunidad.</p>
+                </div>
+
+                <div class="feature-card" data-reveal>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Herramientas Creativas</h3>
+                    <p>Construye, diseña y personaliza tu experiencia con herramientas avanzadas de creación de contenido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Networks Section -->
+    <section id="redes" class="social-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CONECTA</span>
+                <h2 class="section-title">Síguenos en Redes</h2>
+                <p class="section-subtitle">Mantente al día con las últimas noticias, eventos y contenido exclusivo</p>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://youtube.com/@nexus" class="social-card youtube" target="_blank" rel="noopener" data-reveal>
+                    <div class="social-bg"></div>
+                    <div class="social-content">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        <h3>YouTube</h3>
+                        <p>Trailers, gameplays y tutoriales</p>
+                        <span class="social-cta">Suscribirse →</span>
+                    </div>
+                </a>
+
+                <a href="https://twitter.com/nexus" class="social-card twitter" target="_blank" rel="noopener" data-reveal>
+                    <div class="social-bg"></div>
+                    <div class="social-content">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        <h3>X (Twitter)</h3>
+                        <p>Noticias y actualizaciones rápidas</p>
+                        <span class="social-cta">Seguir →</span>
+                    </div>
+                </a>
+
+                <a href="https://tiktok.com/@nexus" class="social-card tiktok" target="_blank" rel="noopener" data-reveal>
+                    <div class="social-bg"></div>
+                    <div class="social-content">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                        <h3>TikTok</h3>
+                        <p>Contenido viral y entretenido</p>
+                        <span class="social-cta">Seguir →</span>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com/nexus" class="social-card instagram" target="_blank" rel="noopener" data-reveal>
+                    <div class="social-bg"></div>
+                    <div class="social-content">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                        <h3>Instagram</h3>
+                        <p>Screenshots y arte del servidor</p>
+                        <span class="social-cta">Seguir →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="trabajos" class="jobs-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ÚNETE AL EQUIPO</span>
+                <h2 class="section-title">Trabajos Disponibles</h2>
+                <p class="section-subtitle">Buscamos personas apasionadas para construir juntos el mejor servidor de Hytale</p>
+            </div>
+
+            <div class="jobs-categories">
+                <!-- Arte -->
+                <div class="job-category" data-reveal>
+                    <div class="category-header">
+                        <div class="category-icon arte">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                                <path d="M2 2l7.586 7.586"/>
+                                <circle cx="11" cy="11" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Arte & Diseño</h3>
+                        <span class="positions-count">3 posiciones</span>
+                    </div>
+                    <div class="jobs-list">
+                        <div class="job-item">
+                            <span class="job-title">Artista de Texturas</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Diseñador de UI/UX</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Modelador 3D</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programación -->
+                <div class="job-category" data-reveal>
+                    <div class="category-header">
+                        <div class="category-icon programacion">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3>Programación</h3>
+                        <span class="positions-count">4 posiciones</span>
+                    </div>
+                    <div class="jobs-list">
+                        <div class="job-item">
+                            <span class="job-title">Desarrollador de Plugins</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Backend Developer</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Desarrollador Web</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">DevOps / Sysadmin</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Administración -->
+                <div class="job-category" data-reveal>
+                    <div class="category-header">
+                        <div class="category-icon admin">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Administración</h3>
+                        <span class="positions-count">2 posiciones</span>
+                    </div>
+                    <div class="jobs-list">
+                        <div class="job-item">
+                            <span class="job-title">Community Manager</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Coordinador de Eventos</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moderación -->
+                <div class="job-category" data-reveal>
+                    <div class="category-header">
+                        <div class="category-icon moderacion">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Moderación</h3>
+                        <span class="positions-count">5 posiciones</span>
+                    </div>
+                    <div class="jobs-list">
+                        <div class="job-item">
+                            <span class="job-title">Moderador Senior</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Moderador de Discord</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Moderador In-Game</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Helper</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                        <div class="job-item">
+                            <span class="job-title">Moderador de Soporte</span>
+                            <span class="job-badge">Abierto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jobs-cta">
+                <p>¿Interesado en alguna posición? Envía tu solicitud a través de Discord</p>
+                <a href="https://discord.gg/nexus" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    Aplicar en Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="ventajas" class="benefits-section">
+        <div class="benefits-bg"></div>
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">EARLY ADOPTERS</span>
+                <h2 class="section-title">Ventajas de Unirse Ahora</h2>
+                <p class="section-subtitle">Reconocemos tu lealtad. Los que confíen en nosotros desde el principio serán recompensados.</p>
+            </div>
+
+            <div class="benefits-content">
+                <div class="benefits-intro" data-reveal>
+                    <h3>La espera ha sido larga, lo sabemos</h3>
+                    <p>Hemos soñado con Hytale durante años. Cada tráiler, cada actualización, cada momento de incertidumbre... lo hemos vivido juntos como comunidad. Por eso, quienes se unan a NEXUS antes del lanzamiento oficial serán reconocidos para siempre como los verdaderos pioneros.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card" data-reveal>
+                        <div class="benefit-number">01</div>
+                        <div class="benefit-content">
+                            <h4>Rango Fundador Permanente</h4>
+                            <p>Un rango exclusivo con color único que nunca más estará disponible. Muestra que estuviste desde el inicio.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card" data-reveal>
+                        <div class="benefit-number">02</div>
+                        <div class="benefit-content">
+                            <h4>Acceso Prioritario</h4>
+                            <p>Sé el primero en probar nuevas características, mapas y eventos antes que nadie.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card" data-reveal>
+                        <div class="benefit-number">03</div>
+                        <div class="benefit-content">
+                            <h4>Cosméticos Exclusivos</h4>
+                            <p>Skins, capes y efectos visuales que solo estarán disponibles para early adopters.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card" data-reveal>
+                        <div class="benefit-number">04</div>
+                        <div class="benefit-content">
+                            <h4>Voz en el Desarrollo</h4>
+                            <p>Tu opinión importa. Participa en votaciones y decisiones sobre el futuro del servidor.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card" data-reveal>
+                        <div class="benefit-number">05</div>
+                        <div class="benefit-content">
+                            <h4>Reconocimiento Eterno</h4>
+                            <p>Tu nombre aparecerá en los créditos del servidor y en monumentos especiales in-game.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card" data-reveal>
+                        <div class="benefit-number">06</div>
+                        <div class="benefit-content">
+                            <h4>Comunidad VIP</h4>
+                            <p>Acceso a canales exclusivos de Discord donde planificamos el futuro juntos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="novedades" class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ACTUALIZACIONES</span>
+                <h2 class="section-title">Novedades del Proyecto</h2>
+                <p class="section-subtitle">Sigue el progreso de desarrollo de NEXUS</p>
+            </div>
+
+            <div class="news-timeline">
+                <div class="news-item" data-reveal>
+                    <div class="news-date">
+                        <span class="date-day">06</span>
+                        <span class="date-month">ENE</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Anuncio</span>
+                        <h3>¡Lanzamiento de la web oficial!</h3>
+                        <p>Después de semanas de trabajo, estrenamos nuestra página web. Aquí compartiremos todas las novedades sobre NEXUS y el progreso del desarrollo.</p>
+                    </div>
+                </div>
+
+                <div class="news-item" data-reveal>
+                    <div class="news-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">ENE</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Equipo</span>
+                        <h3>Búsqueda de personal activa</h3>
+                        <p>Hemos abierto las solicitudes para unirse al equipo de NEXUS. Buscamos artistas, programadores, administradores y moderadores apasionados.</p>
+                    </div>
+                </div>
+
+                <div class="news-item" data-reveal>
+                    <div class="news-date">
+                        <span class="date-day">01</span>
+                        <span class="date-month">ENE</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Comunidad</span>
+                        <h3>Apertura del Discord</h3>
+                        <p>¡Feliz año nuevo! Arrancamos 2026 con la apertura de nuestro servidor de Discord. Únete y sé parte de la comunidad desde el primer momento.</p>
+                    </div>
+                </div>
+
+                <div class="news-item" data-reveal>
+                    <div class="news-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">DIC</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Proyecto</span>
+                        <h3>Inicio del proyecto NEXUS</h3>
+                        <p>Con el anuncio de la fecha de lanzamiento de Hytale, comenzamos oficialmente el desarrollo del servidor. El sueño empieza a hacerse realidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="nexus.png" alt="NEXUS" class="footer-logo">
+                    <p>El servidor de Hytale en español que llevábamos esperando.</p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/nexus" aria-label="Discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.125-.094.25-.192.372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/@nexus" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/></svg>
+                        </a>
+                        <a href="https://twitter.com/nexus" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/nexus" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z"/></svg>
+                        </a>
+                        <a href="https://tiktok.com/@nexus" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#caracteristicas">Características</a></li>
+                            <li><a href="#redes">Redes Sociales</a></li>
+                            <li><a href="#trabajos">Trabajos</a></li>
+                            <li><a href="#ventajas">Ventajas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Comunidad</h4>
+                        <ul>
+                            <li><a href="https://discord.gg/nexus">Discord</a></li>
+                            <li><a href="#novedades">Novedades</a></li>
+                            <li><a href="#trabajos">Únete al Equipo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Términos de Servicio</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Normas del Servidor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXUS. Todos los derechos reservados.</p>
+                <p class="footer-disclaimer">NEXUS no está afiliado con Hypixel Studios ni con Riot Games. Hytale es una marca registrada de Hypixel Studios.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        <span>¡IP copiada al portapapeles!</span>
     </div>
-  </footer>
 
-  <script>
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(function() {
-        // Find the button that was clicked
-        event.target.closest('.copy-btn').classList.add('copied');
-        
-        // Reset the button state after 2 seconds
-        setTimeout(() => {
-          event.target.closest('.copy-btn').classList.remove('copied');
-        }, 2000);
-      }).catch(function(err) {
-        console.error('Error al copiar: ', err);
-      });
-    }
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
