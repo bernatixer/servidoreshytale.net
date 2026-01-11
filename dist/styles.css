@@ -222,6 +222,13 @@ body {
     box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
 }
 
+.nav-discord-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
 /* Mobile Menu */
 .mobile-menu-btn {
     display: none;
@@ -729,7 +736,7 @@ body {
 
 .hero-logo {
     width: 100%;
-    max-width: 340px;
+    max-width: 600px;
     height: auto;
     position: relative;
     z-index: 2;
@@ -1207,6 +1214,210 @@ body {
 }
 
 /* ==========================================
+   Cosmetics Section
+   ========================================== */
+.cosmetics-section {
+    padding: var(--section-padding) 0;
+    background: linear-gradient(to bottom, var(--navy-dark), var(--navy-base));
+    position: relative;
+    overflow: hidden;
+}
+
+.cosmetics-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--purple-base), transparent);
+}
+
+.cosmetics-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* Plushies Grid - Clean, no boxes */
+.plushies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.plushie-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: var(--transition-base);
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+}
+
+.plushie-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    filter: drop-shadow(0 20px 40px rgba(139, 92, 246, 0.3));
+}
+
+/* Special Variants */
+.special-variants {
+    text-align: center;
+}
+
+.variants-header {
+    margin-bottom: 48px;
+}
+
+.variants-header h3 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-light), var(--purple-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+}
+
+.variants-header p {
+    color: var(--gray-400);
+    font-size: 17px;
+}
+
+/* Variants in a single row */
+.variants-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.variant-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition-base);
+}
+
+.variant-item img {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    transition: var(--transition-base);
+}
+
+.variant-item.golden img {
+    filter: drop-shadow(0 8px 25px rgba(212, 160, 18, 0.4));
+}
+
+.variant-item.smoke img {
+    filter: drop-shadow(0 8px 25px rgba(139, 92, 246, 0.4));
+}
+
+.variant-item:hover {
+    transform: translateY(-10px);
+}
+
+.variant-item.golden:hover img {
+    filter: drop-shadow(0 15px 40px rgba(212, 160, 18, 0.6));
+}
+
+.variant-item.smoke:hover img {
+    filter: drop-shadow(0 15px 40px rgba(139, 92, 246, 0.6));
+}
+
+.variant-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    z-index: 2;
+}
+
+.variant-badge.golden {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-base));
+    color: var(--navy-darkest);
+    box-shadow: 0 4px 15px rgba(212, 160, 18, 0.5);
+}
+
+.variant-badge.smoke {
+    background: linear-gradient(135deg, var(--purple-light), var(--teal-base));
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5);
+}
+
+/* Cosmetics CTA */
+.cosmetics-cta {
+    text-align: center;
+    padding: 32px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cosmetics-cta p {
+    font-size: 18px;
+    color: var(--gray-300);
+    margin-bottom: 20px;
+}
+
+/* Responsive Cosmetics */
+@media (max-width: 900px) {
+    .plushies-grid {
+        gap: 20px;
+    }
+
+    .variant-item img {
+        width: 150px;
+    }
+
+    .variants-row {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .plushies-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .variants-row {
+        gap: 20px;
+    }
+
+    .variant-item img {
+        width: 120px;
+    }
+
+    .variants-header h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plushies-grid {
+        gap: 8px;
+    }
+
+    .variant-item img {
+        width: 100px;
+    }
+
+    .variant-badge {
+        font-size: 8px;
+        padding: 4px 10px;
+    }
+}
+
+/* ==========================================
    Social Section
    ========================================== */
 .social-section {
@@ -1450,6 +1661,87 @@ body {
 .jobs-cta p {
     color: var(--gray-300);
     margin-bottom: 20px;
+}
+
+/* Jobs Recruitment Card */
+.jobs-recruitment {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.recruitment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(63, 212, 217, 0.05));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.recruitment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple-base), var(--teal-base));
+}
+
+.recruitment-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.05));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.recruitment-icon svg {
+    width: 40px;
+    height: 40px;
+    color: var(--purple-light);
+}
+
+.recruitment-content h3 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.recruitment-content p {
+    color: var(--gray-300);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+.recruitment-highlights {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.recruitment-highlights li {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--gray-200);
+    font-size: 14px;
 }
 
 /* ==========================================
@@ -1940,7 +2232,7 @@ body {
     }
     
     .hero-logo {
-        max-width: 320px;
+        max-width: 400px;
     }
     
     .hero-actions {
@@ -2023,7 +2315,7 @@ body {
     }
     
     .hero-logo {
-        max-width: 260px;
+        max-width: 320px;
     }
     
     .section-title {
